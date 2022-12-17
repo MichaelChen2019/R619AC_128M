@@ -11,9 +11,6 @@
 name: p2w_r619ac_128m
 
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: 00 17 * * *
   repository_dispatch:
   workflow_dispatch:
     inputs:
@@ -21,7 +18,8 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
-
+  schedule:
+    - cron: 00 17 * * *
 env:
   REPO_URL: https://github.com/DHDAXCW/lede
   REPO_BRANCH: master
